@@ -14,4 +14,4 @@ phases:
     commands:
       - echo "Updating files in the S3 bucket..."
       - aws s3 sync build/ s3://$bucket_name --delete
-       - aws cloudfront create-invalidation --distribution-id $cloudfront_distribution --paths "/*"
+      - aws cloudfront create-invalidation --distribution-id $cloudfront_distribution --paths "/*"
